@@ -14,6 +14,5 @@ RUN adduser -Ds /bin/bash steam &&\
 USER steam
 
 EXPOSE 21025
-ENTRYPOINT ["./steamcmd.sh"]
 
 
