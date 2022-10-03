@@ -13,4 +13,5 @@ if [ "$1" = "update" ]; then
   $command
 fi
 
-$server
+/bin/bash
+#$server
