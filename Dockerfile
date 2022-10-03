@@ -1,7 +1,7 @@
 FROM steamcmd/steamcmd:ubuntu-20
 
 RUN apt update &&\
-  apt install -y software-properties-common lib32gcc1 libvorbisfile3 wget tar
+  apt install -y software-properties-common lib32gcc1 libvorbisfile3 wget tar xterm
 
 WORKDIR /home/steamcmd
 
