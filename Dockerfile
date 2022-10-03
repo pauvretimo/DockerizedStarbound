@@ -18,4 +18,4 @@ USER steam
 
 EXPOSE 21025
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/usr/bin/env bash"]
