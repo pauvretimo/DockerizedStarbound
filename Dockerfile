@@ -1,6 +1,6 @@
 FROM steamcmd/steamcmd:alpine-3
 
-RUN apk add --no-cache --upgrade bash libvorbis wget tar
+RUN apk add --no-cache --upgrade bash libvorbis wget tar libgcc
 
 WORKDIR /home/steamcmd
 
