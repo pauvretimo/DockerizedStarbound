@@ -8,8 +8,8 @@ RUN wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz 
   tar -zxvf steamcmd_linux.tar.gz
 
 RUN adduser -Ds /bin/bash steam &&\
-  chown -R steam: steamcmd &&\
-  chmod u+rwx steamcmd
+  chown -R steam: ../steamcmd &&\
+  chmod u+rwx ../steamcmd
 
 USER steam
 
