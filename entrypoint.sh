@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 steamsetup="/home/steamcmd/steamcmd.sh +force_install_dir ./starbound +login "
 server="/home/steamcmd/starbound/linux/starbound_server"
