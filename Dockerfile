@@ -4,9 +4,10 @@ RUN apk add --no-cache --upgrade bash libvorbis wget tar
 
 WORKDIR /home
 
-RUN useradd -ms /bin/bash steam 
-USER steam
+RUN adduser -Ds /bin/bash steam &&\
+  mkdir steamcmd
 
+USER steam
 WORKDIR ./steamcmd
 
 RUN wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz &&\
