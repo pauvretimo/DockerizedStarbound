@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 steamsetup="/home/steamcmd/steamcmd.sh +force_install_dir ./starbound +login"
-server="/home/steamcmd/starbound/linux/run_server.sh"
+server="/home/steamcmd/starbound/linux/run-server.sh"
 
 if [ "$1" = "setup" ]; then
   command="$steamsetup $2 $3 +app_update 211820 +quit"
@@ -13,5 +13,4 @@ if [ "$1" = "update" ]; then
   $command
 fi
 
-/bin/bash
-#$server
+$server
