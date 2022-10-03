@@ -17,4 +17,4 @@ USER steam
 
 EXPOSE 21025
 
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
