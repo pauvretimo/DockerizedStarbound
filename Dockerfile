@@ -1,6 +1,6 @@
-FROM steamcmd/steamcmd:alpine-3
+FROM steamcmd/steamcmd:ubuntu-20
 
-RUN apk add --no-cache --upgrade bash libvorbis wget tar libgcc
+RUN apt install --no-cache -y software-properties-common lib32gcc1 libvorbisfile3 wget tar
 
 WORKDIR /home/steamcmd
 
@@ -9,7 +9,7 @@ RUN wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz 
 
 COPY entrypoint.sh ./
 
-RUN adduser -Ds /bin/bash steam &&\
+RUN useradd -s /bin/bash steam &&\
   chown -R steam: ../steamcmd &&\
   chmod u+rwx ../steamcmd &&\
   chmod u+rwx ./entrypoint.sh
