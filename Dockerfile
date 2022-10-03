@@ -7,6 +7,8 @@ WORKDIR /home/steamcmd
 RUN wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz &&\
   tar -zxvf steamcmd_linux.tar.gz
 
+COPY entrypoint.sh ./
+
 RUN adduser -Ds /bin/bash steam &&\
   chown -R steam: ../steamcmd &&\
   chmod u+rwx ../steamcmd
@@ -15,4 +17,4 @@ USER steam
 
 EXPOSE 21025
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["entrypoint.sh"]
