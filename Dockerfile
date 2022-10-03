@@ -12,6 +12,7 @@ COPY entrypoint.sh ./
 RUN adduser -Ds /bin/bash steam &&\
   chown -R steam: ../steamcmd &&\
   chmod u+rwx ../steamcmd
+  chmod u+rwx ./entrypoint.sh
 
 USER steam
 
