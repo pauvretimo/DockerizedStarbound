@@ -4,9 +4,8 @@ RUN apk add --no-cache --upgrade bash libvorbis wget tar
 
 WORKDIR /home
 
-RUN adduser steam &&\
-  su - steam &&\
-  mkdir steamcmd
+RUN useradd -ms /bin/bash steam 
+USER steam
 
 WORKDIR ./steamcmd
 
