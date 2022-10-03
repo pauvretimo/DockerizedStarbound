@@ -1,6 +1,6 @@
 FROM steamcmd/steamcmd:ubuntu-20
 
-RUN apt install --no-cache -y software-properties-common lib32gcc1 libvorbisfile3 wget tar
+RUN apt install -y software-properties-common lib32gcc1 libvorbisfile3 wget tar
 
 WORKDIR /home/steamcmd
 
